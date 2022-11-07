@@ -50,14 +50,14 @@ const Settings = function Settings (props) {
         advances.push(
             (
                 <ListItemButton
-                    disabled={!props.canInvite}
+                    disabled={true}
                     key='invite-user' onClick={() => setOpenInvite(true)}
                 >
                     <ListItemIcon>
                         <LaunchIcon/>
                     </ListItemIcon>
                     <ListItemText>
-                        You are on the wait list to invite new people
+                        There are no invites available for this user.
                     </ListItemText>
                 </ListItemButton>
             )
@@ -81,10 +81,10 @@ const Settings = function Settings (props) {
                         <ListItemIcon>
                             <LaunchIcon/>
                         </ListItemIcon>
-                        <ListItemText primary='Password and authentication'/>
+                        <ListItemText primary='User settings'/>
                     </ListItemButton>
                     <ListSubheader>
-                        Sheet Features
+                        Features
                     </ListSubheader>
                     <Link to={'/'}>
                         <ListItemButton>
@@ -96,7 +96,7 @@ const Settings = function Settings (props) {
                     </Link>
                     <ListItem>
                         <ListItemText
-                            id='switch-pydatafront-from-local'
+                            id='switch-data-from-local'
                             primary='Load local data'
                         />
                         <Switch
@@ -107,7 +107,7 @@ const Settings = function Settings (props) {
                                 console.log('hi')
                             }}
                             inputProps={{
-                                'aria-labelledby': 'switch-list-label-pydatafront-from-local'
+                                'aria-labelledby': 'switch-list-label-data-from-local'
                             }}
                         />
                     </ListItem>
